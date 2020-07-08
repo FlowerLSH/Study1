@@ -20,7 +20,7 @@ def vkdlsem(list,num):
         turn += 1
     return -1
 
-
+# ---------------------- 여기서부터는 테스트부분 (이상혁)
 
 import random
 
