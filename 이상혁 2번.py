@@ -27,3 +27,27 @@ def find_three_smallest(list):
             min3 = list[i]
             min3_index = i
     return min1_index, min2_index, min3_index
+
+#-------------------------------------------------------------------------------------------------최원석 수정코드
+def find_three_smallest(list):
+    newList = [list[0],list[1],list[2]]
+    min1 = list[0]
+    min3 = list[0]
+    for i in newList:
+        if i < min1:
+            min1 = i
+    for i in newList:
+        if i > min3:
+            min3 = i
+    newList.remove(min1)
+    newList.remove(min3)
+    min2 = newList[0]
+
+    for i in range(3, len(list)):
+        if(min1 > list[i]):
+            min1, min2, min3 = list[i], min1, min2
+        elif(min2 > list[i]):
+            min2, min3 = list[i], min2
+        elif(min3 > list[i]):
+            min3 = list[i]
+    return list.index(min1), list.index(min2), list.index(min3)
