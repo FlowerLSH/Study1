@@ -11,3 +11,5 @@ def vkdlsem(list,num):
         else:
             return mid
     return -1
+
+#최원석
