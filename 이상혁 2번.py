@@ -16,7 +16,7 @@ def find_three_smallest(list):
         min2,min1 = list[index_list[0]], list[index_list[1]]
         min2_index, min1_index = index_list[0], index_list[1]
     # ------------------------------여기까진 처음 3개의 값만 비교함, min1이 가장 작음
-    for i in range(4, len(list)): # 리스트 안에서의 대소비교
+    for i in range(3, len(list)): # 리스트 안에서의 대소비교
         if(min1 > list[i]): #min1보다 작으면 하나씩 다 밀림
             min1, min2, min3 = list[i], min1, min2
             min1_index, min2_index, min3_index = i, min1_index, min2_index
