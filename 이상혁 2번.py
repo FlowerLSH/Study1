@@ -1,5 +1,5 @@
 def find_three_smallest(list):
-    min3 = 0 # 최댓값을 찾기 위해 초기값을 0으로 설정
+    min3 = 0 # 처음 3개의 값 중 최댓값을 찾기 위해 초기값을 0으로 설정
 
     for i in range(0,3): # 최댓값 찾는 for문, 최댓값을 찾아 min3에, 인덱스를 min3_index에 저장
         if(min3 < list[i]):
