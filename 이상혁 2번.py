@@ -23,7 +23,7 @@ def find_three_smallest(list):
         elif(min2 > list[i]): #min2보다 작으면 2개만 밀림
             min2, min3 = list[i], min2
             min2_index, min3_index = i, min2_index
-        elif(min3 > list[i]): #min3보다 작으면 3개만 
+        elif(min3 > list[i]): #min3보다 작으면 1개만 
             min3 = list[i]
             min3_index = i
     return min1_index, min2_index, min3_index
