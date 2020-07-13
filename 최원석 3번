@@ -1,0 +1,12 @@
+def wjdfuf(list):
+    if len(list) <= 1:  #리스트 길이 1이하일 때 그냥 리턴
+        return list
+
+    relist = []
+
+    while True:
+        if not len(list) == 0:
+            relist.append(min(list))
+            list.remove(min(list))
+        else:
+            return relist
