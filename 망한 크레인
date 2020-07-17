@@ -1,0 +1,14 @@
+def solution(board, moves):
+    baguni = [0]
+    boom = 0
+    for i in moves:
+        for j in range(0,len(board)):
+            if board[j][i-1] != 0:
+                if len(baguni) >= 1:
+                    if board[j][i-1] == baguni[-1]:
+                        baguni.pop()
+                        boom += 2
+                    else:
+                        baguni.append(board[j][i-1])
+                board[j][i-1] = 0
+    return boom
