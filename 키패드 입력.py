@@ -4,7 +4,6 @@ def solution(numbers, hand):
     distance = [0,0]
     left = [1,4,7]
     right = [3,6,9]
-    j=0
     for i in numbers:
         if(i in left):
             pos_left = i
@@ -14,7 +13,6 @@ def solution(numbers, hand):
             answer += 'R'
         else:
             if(i == 0):
-                j = i
                 i = 11
             pos1, pos2 = pos_left, pos_right
             while True:
@@ -53,6 +51,5 @@ def solution(numbers, hand):
                     pos_right = i
                     answer += 'R'
             distance = [0,0]
-            i = j
                 
     return answer
