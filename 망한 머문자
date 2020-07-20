@@ -1,0 +1,15 @@
+def solution(s):
+    answer = ''
+    alist = s.split()
+    count, num = 0, s.count(' ')+1
+    for i in alist:
+        for j in range(len(i)):
+            if j%2 == 0:
+                answer += i[j].upper()
+            else:
+                answer += i[j].lower()
+        count += 1
+        if count < num:
+            answer += ' '
+        
+    return answer
