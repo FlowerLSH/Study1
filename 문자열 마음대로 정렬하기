@@ -2,7 +2,6 @@ def solution(strings, n):
     answer = []
     index = dict()
     eq = []
-    aaa = ''
     for i in strings:
         index[i] = i[n]
     sorted_index = sorted(index, key=lambda x:index[x])
