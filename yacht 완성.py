@@ -9,7 +9,7 @@ class Yacht:
         self.checking = []
         print("게임이 시작되었습니다.")
         Yacht.rerollDice(self)
-
+#----------------------------------------------------------------------------------------------------------------------------
     def holdDice(self, *hold_numbers):
         new_hold_numbers = list(hold_numbers)
         new_hold_numbers.sort()
@@ -32,13 +32,13 @@ class Yacht:
             else:
                 print("{}는 현재 홀드되어있지 않습니다.".format(i))
         Yacht.checkDice(self)
-
+#----------------------------------------------------------------------------------------------------------------------------
     def checkDice(self):
         print("현재 주사위 :", self.dice)
         print("현재 홀드된 주사위 :", self.holdlist)
         print("현재 남은 리롤 횟수 :", self.reroll)
         return 0
-
+#----------------------------------------------------------------------------------------------------------------------------
     def rerollDice(self):
         if self.reroll > 0 and len(self.holdlist) != 5:
             rerollnum = 5 - len(self.holdlist)
@@ -63,13 +63,13 @@ class Yacht:
             print("5개 전부 홀드한 상태에서는 리롤이 불가능합니다.")
         Yacht.checkDice(self)
         self.checking = self.dice[:]
-
+#----------------------------------------------------------------------------------------------------------------------------
     def resetDice(self):
         self.dice = []
         self.holdlist = []
         self.reroll = 3
         Yacht.rerollDice(self)
-
+#----------------------------------------------------------------------------------------------------------------------------
     def countNumber(self):
         empty = []
         for i in range(1,7):
@@ -135,7 +135,7 @@ class Yacht:
         print("다시 하려면 아무 키나 입력해주세요")
         a = input() 
         Yacht.resetDice(self)
-
+#----------------------------------------------------------------------------------------------------------------------------
 test = Yacht()
 
 while True:
