@@ -1,9 +1,0 @@
-def solution(n):
-    nlist = [int(i) for i in range(2,n+1)]
-    nlist2 = list(nlist)
-    for i in nlist:
-        lol = list(filter(lambda x: x % i == 0, nlist))
-        for j in lol:
-            if j in nlist2:
-                nlist2.remove(j)
-    return len(nlist2)
